@@ -1,6 +1,6 @@
-# Kanzulgina Invoice Management System
+# Nakelgreen Invoice Management System
 
-Kanzulgina Invoice Management System is a Django-based web application designed to manage invoices, vendors, customers, and products. The system allows users to create, edit, and delete invoices, vendors, and customers, as well as generate PDF invoices.
+Nakelgreen Invoice Management System is a Django-based web application designed to manage invoices, vendors, customers, and products. The system allows users to create, edit, and delete invoices, vendors, and customers, as well as generate PDF invoices.
 
 ## Features
 
