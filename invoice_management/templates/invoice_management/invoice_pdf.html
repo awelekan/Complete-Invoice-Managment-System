@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Invoice PDF</title>
+</head>
+<body>
+    <h1>Invoice {{ invoice.id }}</h1>
+    <p>Customer: {{ invoice.customer.name }}</p>
+    <p>Vendor: {{ invoice.vendor.name }}</p>
+    <p>Product: {{ invoice.product.name }}</p>
+    <p>Issue Date: {{ invoice.issue_date }}</p>
+    <p>Due Date: {{ invoice.due_date }}</p>
+    <p>Total Amount: {{ invoice.total_amount }}</p>
+    <p>Status: {{ invoice.status }}</p>
+</body>
+</html>

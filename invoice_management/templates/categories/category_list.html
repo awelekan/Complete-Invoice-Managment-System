@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Category List</title>
+</head>
+<body>
+    <h2>Category List</h2>
+    <ul>
+        {% for category in categories %}
+            <li>{{ category }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'invoice_management:category_create' %}">Create New Category</a>
+</body>
+</html>

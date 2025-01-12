@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Invoice List</title>
+</head>
+<body>
+    <h2>Invoice List</h2>
+    <ul>
+        {% for invoice in invoices %}
+            <li><a href="{% url 'invoice_management:invoice_detail' invoice.pk %}">{{ invoice }}</a></li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'invoice_management:create_invoice' %}">Create New Invoice</a>
+</body>
+</html>

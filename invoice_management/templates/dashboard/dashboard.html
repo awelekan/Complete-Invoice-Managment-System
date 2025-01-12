@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+    <h2>Dashboard</h2>
+    <h3>Invoices</h3>
+    <ul>
+        {% for invoice in invoices %}
+            <li>{{ invoice }}</li>
+        {% endfor %}
+    </ul>
+    <h3>Vendors</h3>
+    <ul>
+        {% for vendor in vendors %}
+            <li>{{ vendor }}</li>
+        {% endfor %}
+    </ul>
+    <h3>Customers</h3>
+    <ul>
+        {% for customer in customers %}
+            <li>{{ customer }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
