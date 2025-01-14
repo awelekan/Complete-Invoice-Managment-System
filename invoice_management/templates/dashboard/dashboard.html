@@ -1,27 +1,53 @@
+{% load static %}
 <!DOCTYPE html>
+
 <html>
 <head>
     <title>Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/dashboard.css' %}">
 </head>
 <body>
-    <h2>Dashboard</h2>
-    <h3>Invoices</h3>
-    <ul>
-        {% for invoice in invoices %}
-            <li>{{ invoice }}</li>
-        {% endfor %}
-    </ul>
-    <h3>Vendors</h3>
-    <ul>
-        {% for vendor in vendors %}
-            <li>{{ vendor }}</li>
-        {% endfor %}
-    </ul>
-    <h3>Customers</h3>
-    <ul>
-        {% for customer in customers %}
-            <li>{{ customer }}</li>
-        {% endfor %}
-    </ul>
+    <div class="navbar">
+        <a href="{% url 'invoice_management:dashboard' %}" class="active">Dashboard</a>
+        <a href="{% url 'invoice_management:invoice_list' %}">Invoices</a>
+        <a href="{% url 'invoice_management:vendor_list' %}">Vendors</a>
+        <a href="{% url 'invoice_management:customer_list' %}">Customers</a>
+        <a href="{% url 'invoice_management:category_list' %}">Categories</a>
+        <a href="{% url 'invoice_management:logout' %}">Logout</a>
+    </div>
+
+    <div class="container">
+        <h1>Dashboard</h1>
+        <div class="dashboard">
+            <div class="card">
+                <h2>Invoices</h2>
+                <ul>
+                    {% for invoice in invoices %}
+                        <li>{{ invoice }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="card">
+                <h2>Vendors</h2>
+                <ul>
+                    {% for vendor in vendors %}
+                        <li>{{ vendor }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="card">
+                <h2>Customers</h2>
+                <ul>
+                    {% for customer in customers %}
+                        <li>{{ customer }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2023 Your Company. All rights reserved.</p>
+    </div>
 </body>
 </html>
